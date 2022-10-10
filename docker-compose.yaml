@@ -1,0 +1,31 @@
+services:
+  serverOne:
+    image: helium:console-testnet
+    container_name: serverOne
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - mysql
+  serverTwo:
+    image: postgres:13.4
+    container_name: serverTwo
+    restart: always
+    ports:
+      - 8081:8081
+    depends_on:
+      - mysql
+#  mysql:
+#    image: mysql:5.7
+#    container_name: mysql:5.7
+#    restart: always
+#    ports:
+#      - 3306:3306
+#    volumes:
+#      - "/mydata/mysql/log:/var/log/mysql"
+#      - "/mydata/mysql/data:/var/lib/mysql"
+#      - "/mydata/mysql/log:/var/log/mysql"
+
+
+
+
