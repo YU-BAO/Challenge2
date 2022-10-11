@@ -31,7 +31,7 @@ public class MyTest {
         if (list != null) {
             System.out.println(list);
         } else {
-            System.out.println("查询失败");
+            System.out.println("Failed to get list");
         }
     }
 
@@ -41,7 +41,7 @@ public class MyTest {
         if (fund != null) {
             System.out.println(fund);
         } else {
-            System.out.println("查询失败");
+            System.out.println("Failed to get one");
         }
     }
 
@@ -55,9 +55,9 @@ public class MyTest {
         fund.setAddress("测试地址");
         boolean save = fundService.save(fund);
         if (save) {
-            System.out.println("添加成功");
+            System.out.println("Successfully added");
         } else {
-            System.out.println("添加失败");
+            System.out.println("Failed to add");
         }
 
     }
@@ -66,9 +66,9 @@ public class MyTest {
     public void delete() {
         boolean b = fundService.removeById(1);
         if (b) {
-            System.out.println("删除成功");
+            System.out.println("Successfully deleted");
         } else {
-            System.out.println("删除失败");
+            System.out.println("Failed to delete");
         }
     }
 
@@ -83,9 +83,9 @@ public class MyTest {
         fund.setAddress("测试地址");
         boolean b = fundService.updateById(fund);
         if (b) {
-            System.out.println("修改成功");
+            System.out.println("Successfully updated");
         } else {
-            System.out.println("修改失败");
+            System.out.println("Failed to update");
         }
     }
 

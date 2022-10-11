@@ -54,9 +54,9 @@ public class FundController {
     public String add(@RequestBody Fund fund) {
         boolean save = fundService.save(fund);
         if (save) {
-            return "添加成功";
+            return "Successfully added";
         } else {
-            return "添加失败";
+            return "Failed to add";
         }
     }
 
@@ -65,11 +65,11 @@ public class FundController {
         boolean b = fundService.removeById(id);
 
         if (b) {
-            System.out.println("删除成功");
-            return "删除成功";
+            System.out.println("Successfully deleted");
+            return "Successfully deleted";
         } else {
-            System.out.println("删除失败");
-            return "删除失败";
+            System.out.println("Failed to delete");
+            return "Failed to delete";
         }
 
     }
@@ -80,11 +80,11 @@ public class FundController {
 
         boolean b = fundService.updateById(fund);
         if (b) {
-            System.out.println("更新成功");
-            return "更新成功";
+            System.out.println("Successfully updated");
+            return "Successfully updated";
         } else {
-            System.out.println("更新失败");
-            return "更新失败";
+            System.out.println("Failed to update");
+            return "Failed to update";
         }
     }
 
