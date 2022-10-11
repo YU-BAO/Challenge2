@@ -25,7 +25,7 @@ public class FundController {
 
     @GetMapping("/index")
     public String test() {
-        return "我是serverTwo";
+        return "serverTwo";
     }
 
     @GetMapping("/getList")
